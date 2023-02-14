@@ -2,35 +2,6 @@ import threading
 import time
 import socket
 
-class TcpClientClass(threading.Thread):
-    def __init__(self,addres,port):
-        self.running = True
-        self.addres = addres
-        self.port = port
-
-    def terminate(self):
-        self.running = False
-
-    def run(self):
-        try:
-            s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-            s.connect((self.addres,self.port))
-            print('conexao TCP estabelecida')
-        except:
-            print('falhou em fazer o a conexao TCP como cliente')
-            #self.terminate()
-        else:
-            print('continuando')
-            while self.running:
-                time.sleep(1) 
-                s.send("mensagem enviada para controlar determinado player".encode())
-                data = "" 
-                while("END" not in data):
-                    data = s.recv(1024).decode()
-                    print(data)
-                break#a logica vem aqui
-
-
 
 #Cria a conexao TCP
 def connect(port):
