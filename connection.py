@@ -19,9 +19,9 @@ def connect(port):
 
 
 #Da o estado e a recompensa que o agente recebeu
-def get_state_reward(s , act):
+def get_state_reward(s, act):
     s.send(str(act).encode())
-    data = "" 
+    data = ""
     data_recv = False;
     while(not data_recv):
         data = s.recv(1024).decode()
