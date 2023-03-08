@@ -4,8 +4,3 @@ Projeto de execução de algoritmo de Q-Learning usando python e uma instância 
 ## Como executar
 1.  
 2. 
-
-## Equipe
-- [Marconi Gomes](https://github.com/MarconiGRF)
-- [Marcelo Santana](https://github.com/marcsantana)
-- [Eliab Bernardino](https://github.com/eliab)
